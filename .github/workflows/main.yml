@@ -1,21 +1,30 @@
+name: Deploy to cPanel
+
 on:
   push:
-    branches: [ main ]
-name: 🚀 Deploy website on push
+    branches:
+      - main
+
 jobs:
-  web-deploy:
-        - name: FTP Uploader
-        # You may pin to the exact commit or the version.
-        # uses: zinh/ftp-uploader-action@10d256274547c8b84848edf454bfeb0b8a451c41
-        uses: zinh/ftp-uploader-action@v0.4
-        with:
-          # Hostname of ftp server, eg: ftpHostname: ftp.test
-          ftpHostname: ${{ secrets.FTP_SERVER }}
-          # User of ftp account
-          ftpUsername: ${{ secrets.FTP_USERNAME }}
-          # optional, default is anonymous
-          # Password of ftp account
-          ftpPassword: ${{ secrets.FTP_PASSWORD }} # optional, default is 
-          # List files to upload to ftp server
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to cPanel
+      run: |
+        FTP_USERNAME=$FTP_USERNAME
+        FTP_PASSWORD=$FTP_PASSWORD
+        FTP_HOST=FTP_HOST
+        REMOTE_DIR=REMOTE_DIR
+
+        lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R ./ $REMOTE_DIR --exclude .git --exclude .github --exclude .gitignore"
+      env:
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_HOST: ${{ secrets.FTP_SERVER }}
+        REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
 
           
