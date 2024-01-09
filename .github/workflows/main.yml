@@ -23,7 +23,7 @@ jobs:
         FTP_HOST=$FTP_HOST
 
 
-        lftp -d -c "open -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST; --exclude .git --exclude .github --exclude .gitignore"
+        lftp -d -c "open -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST;mirror -R --exclude .git --exclude .github --exclude .gitignore"
 
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
