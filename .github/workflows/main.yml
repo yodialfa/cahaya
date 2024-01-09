@@ -23,7 +23,8 @@ jobs:
         FTP_HOST=$FTP_HOST
         REMOTE_DIR=$REMOTE_DIR
 
-        lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R ./ $REMOTE_DIR --exclude .git --exclude .github --exclude .gitignore"
+        lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD -p 21 $FTP_HOST; mirror -R ./ $REMOTE_DIR --exclude .git --exclude .github --exclude .gitignore"
+
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
