@@ -154,7 +154,7 @@
                         <h2 class="text-start">{{ $title }}</h2>
                         <span>
 
-                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahaya-nusantara.co.id</a></h3>
+                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahayaexpress.com</a></h3>
                         </span>
                     </th>
                     
@@ -163,7 +163,8 @@
                         <span><img class="barcode" src="data:image/png;base64,{{ base64_encode($barcode) }}" alt="Barcode"></span>
                         <span>{{ $transaksi['no_resi'] }}</span> <br>
                         {{-- <span>Zip code : 560077</span> <br> --}}
-                        <span>Address: Jl. Jenderal Ahmad Yani No. 288 Kota Bandung 082219082230</span> 
+                        <span>Address: Jl. Thariq bin Ziyad H2 n0. 51 Cempaka Arum Kota Bandung 0813 856 543 08 / 0821 155 35101 </span> 
+                        
                     </th>
                 </tr>
             </thead>
@@ -335,7 +336,7 @@
                         <h2 class="text-start">{{ $title }}</h2>
                         <span>
 
-                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahaya-nusantara.co.id</a></h3>
+                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahayaexpress.com</a></h3>
                         </span>
                     </th>
                     
@@ -344,7 +345,8 @@
                         <span><img class="barcode" src="data:image/png;base64,{{ base64_encode($barcode) }}" alt="Barcode"></span>
                         <span>{{ $transaksi['no_resi'] }}</span> <br>
                         {{-- <span>Zip code : 560077</span> <br> --}}
-                        <span>Address: Jl. Jenderal Ahmad Yani No. 288 Kota Bandung 082219082230</span> 
+                        <span>Address: Jl. Thariq bin Ziyad H2 n0. 51 Cempaka Arum Kota Bandung 0813 856 543 08 / 0821 155 35101 </span> 
+                        
                     </th>
                 </tr>
             </thead>
@@ -393,7 +395,7 @@
                     <td rowspan="2">Alamat :</td>
                     {{-- <td>:</td> --}}
 
-                    <td colspan="3" rowspan="2" style="max-width: 200px; word-wrap: break-word;">{{ $transaksi['alamat-penerima'] }} gcgcygcgjcgjhcgcjcjhchjcghjchjchjchjchgchccjhchjchjchjgchchgcgcygcgjcgjhcgcjcjhchjcghjchjchjchjchgchccjhchjchjchjgchch</td>
+                    <td colspan="3" rowspan="2" style="max-width: 200px; word-wrap: break-word;">{{ $transaksi['alamat-penerima'] }} </td>
     
                     <td rowspan="2">Alamat</td>
                     {{-- <td rowspan="2">:</td> --}}
@@ -516,7 +518,7 @@
                         <h2 class="text-start">{{ $title }}</h2>
                         <span>
 
-                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahaya-nusantara.co.id</a></h3>
+                            <h3 class="text-start"><a href="www.cahaya-nusantara.co.id">www.cahayaexpress.com</a></h3>
                         </span>
                     </th>
                     
@@ -525,7 +527,8 @@
                         <span><img class="barcode" src="data:image/png;base64,{{ base64_encode($barcode) }}" alt="Barcode"></span>
                         <span>{{ $transaksi['no_resi'] }}</span> <br>
                         {{-- <span>Zip code : 560077</span> <br> --}}
-                        <span>Address: Jl. Jenderal Ahmad Yani No. 288 Kota Bandung 082219082230</span> 
+                        <span>Address: Jl. Thariq bin Ziyad H2 n0. 51 Cempaka Arum Kota Bandung 0813 856 543 08 / 0821 155 35101 </span> 
+                        
                     </th>
                 </tr>
             </thead>
@@ -574,7 +577,7 @@
                     <td rowspan="2">Alamat :</td>
                     {{-- <td>:</td> --}}
 
-                    <td colspan="3" rowspan="2" style="max-width: 200px; word-wrap: break-word;">{{ $transaksi['alamat-penerima'] }} gcgcygcgjcgjhcgcjcjhchjcghjchjchjchjchgchccjhchjchjchjgchchgcgcygcgjcgjhcgcjcjhchjcghjchjchjchjchgchccjhchjchjchjgchch</td>
+                    <td colspan="3" rowspan="2" style="max-width: 200px; word-wrap: break-word;">{{ $transaksi['alamat-penerima'] }} </td>
     
                     <td rowspan="2">Alamat</td>
                     {{-- <td rowspan="2">:</td> --}}
