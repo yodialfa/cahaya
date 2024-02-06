@@ -29,14 +29,14 @@ return new class extends Migration
             $table->string('cara_bayar');
             $table->integer('jumlah');
             $table->integer('berat');
-            $table->integer('harga');
+            $table->bigInteger('harga');
             $table->float('diskon');
             $table->float('biaya_surat');
             $table->string('jenis_barang');
             $table->float('biaya_asuransi');
             $table->float('total_harga');
             $table->foreignId('employeeId');
-            $table->char('status',10)->default(0);
+            $table->char('status', 10)->default(0);
             $table->timestamps();
         });
     }
